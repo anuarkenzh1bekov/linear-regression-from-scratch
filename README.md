@@ -1,21 +1,21 @@
 # Linear Regression from Scratch
 
-Мой учебный проект, где я разбирался, как работает линейная регрессия изнутри — без использования готового `LinearRegression` из sklearn.
+A learning project where I explored how linear regression works under the hood — without using sklearn's ready-made `LinearRegression`.
 
-## Что я изучил
+## What I learned
 
-- **Closed-form solution (нормальное уравнение)** — реализовал линейную регрессию через формулу `(XᵀX)⁻¹ Xᵀy`. Понял, как добавляется столбец единиц для intercept и как из полученного вектора вытащить коэффициенты и свободный член.
-- **Gradient Descent** — реализовал обучение методом градиентного спуска: инициализация весов, вычисление предсказаний, градиента и обновление весов с learning rate по эпохам.
-- Работа с матрицами в **NumPy** (`@`, `np.c_`, `.T`, `np.linalg.inv`).
-- Оценка качества модели через **R²** (`r2_score`).
+- **Closed-form solution (Normal Equation)** — implemented linear regression using the formula `(XᵀX)⁻¹ Xᵀy`. Learned how the bias column of ones is added for the intercept and how to extract the coefficients and intercept from the resulting vector.
+- **Gradient Descent** — implemented training via gradient descent: weight initialization, computing predictions, the gradient, and updating weights with a learning rate over epochs.
+- Working with matrices in **NumPy** (`@`, `np.c_`, `.T`, `np.linalg.inv`).
+- Evaluating model quality with **R²** (`r2_score`).
 
-## Файлы
+## Files
 
-- `closed-formula-solution.py` — линейная регрессия через нормальное уравнение на датасете California Housing.
-- `gradient Descent-solution.py` — та же идея, но обучение через градиентный спуск на `data/dataset.csv`.
-- `data/dataset.csv` — учебный датасет (studytime, attendance, age → score).
+- `closed-formula-solution.py` — linear regression via the Normal Equation on the California Housing dataset.
+- `gradient Descent-solution.py` — same idea, but trained with gradient descent on `data/dataset.csv`.
+- `data/dataset.csv` — practice dataset (studytime, attendance, age → score).
 
-## Запуск
+## Run
 
 ```bash
 python closed-formula-solution.py
